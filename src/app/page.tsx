@@ -24,7 +24,7 @@ export default function Home() {
               Venha nos visitar e conhecer melhor esse Deus maravilhoso que servimos!
             </p>
             <Link 
-              href="https://www.google.com/search?q=ieq+passo+dos+negros&sxsrf=APwXEdeOzusCzL5ft_MJ59Gi-yODbhmX3Q%3A1686107292725&ei=nPR_ZI7zK8OT0Ab-0ruICA&ved=0ahUKEwiOsfGRl7D_AhXDCdQKHX7pDoEQ4dUDCA8&uact=5&oq=ieq+passo+dos+negros&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzoICAAQogQQsAM6BAgjECc6BwgjEIoFECc6DgguEIMBENQCELEDEIAEOgsIABCABBCxAxCDAToNCC4QigUQxwEQ0QMQQzoLCAAQigUQsQMQgwE6BQgAEIAEOggIABCABBCxAzoLCC4QigUQsQMQgwE6CAguEIAEENQCOg4ILhDHARCxAxDRAxCABDoLCC4QgAQQxwEQrwE6EQguEIoFELEDEIMBEMcBEK8BOgsILhCABBDHARDRAzoHCAAQigUQQzoICAAQFhAeEA86BggAEBYQHjoICAAQFhAeEAo6AggmOgUIIRCgAToICCEQFhAeEB1KBAhBGAFQ-AhYvhpgtBtoBHAAeACAAd8BiAH8FpIBBjAuMTguMZgBAKABAcABAcgBAg&sclient=gws-wiz-serp"
+              href="https://www.google.com/maps/dir//ieq+passo+dos+negros/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x951975510bd5fe91:0xd72a2db9ee504f3f?sa=X&ved=2ahUKEwjM9oOAnrD_AhXfCbkGHQ-5BL8Q9Rd6BAg_EAM"
               className="d-flex items-center"
             >
               <div className=" hover:bg-black hover:rounded p-3 mt-10 text-base font-semibold leading-7 text-gray-300 flex items-center justify-center">
