@@ -56,7 +56,7 @@ const Home: React.FunctionComponent = () => {
           </p>
           <Link 
             href="https://www.google.com/maps/dir//ieq+passo+dos+negros/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x951975510bd5fe91:0xd72a2db9ee504f3f?sa=X&ved=2ahUKEwjM9oOAnrD_AhXfCbkGHQ-5BL8Q9Rd6BAg_EAM"
-            className="flex items-center"
+            className="flex items-center justify-center"
           >
             <button type="button" className="text-white bg-gray-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-gray-400 font-medium rounded-lg text-sm px-5 py-2.5 text-left inline-flex items-center mr-2 my-3 dark:bg-gray-600 dark:hover:bg-gray-800 dark:focus:ring-gray-900">
               <MapPinIcon className="h-6 w-6 text-white mr-2" aria-hidden="true" />
