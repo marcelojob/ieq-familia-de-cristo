@@ -34,7 +34,7 @@ const Home: React.FunctionComponent = () => {
   }, [getCells])
 
   return (
-    <main className="flex flex-col items-center justify-between lg:p-20 p-5 light:bg-black">
+    <main className="flex flex-col items-center justify-between lg:p-20 p-5 bg-black">
       <Loader show={isLoading} />
       <div className="relative isolate">
         <Image
