@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { GlobeAltIcon } from '@heroicons/react/24/outline';
+import { MapPinIcon, UserIcon } from '@heroicons/react/24/outline';
 import { useCallback, useEffect, useState } from 'react';
 import { findCells } from './api';
 import { cellProps } from './api/models';
@@ -33,7 +33,7 @@ const Home: React.FunctionComponent = () => {
   }, [getCells])
 
   return (
-    <main className="flex flex-col items-center justify-between lg:p-24 p-5">
+    <main className="flex flex-col items-center justify-between lg:p-20 p-5">
       <Loader show={isLoading} />
       <div className="relative isolate">
         <Image
@@ -55,14 +55,12 @@ const Home: React.FunctionComponent = () => {
           </p>
           <Link 
             href="https://www.google.com/maps/dir//ieq+passo+dos+negros/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x951975510bd5fe91:0xd72a2db9ee504f3f?sa=X&ved=2ahUKEwjM9oOAnrD_AhXfCbkGHQ-5BL8Q9Rd6BAg_EAM"
-            className="d-flex items-center"
+            className="flex items-center"
           >
-            <div className=" hover:bg-black hover:rounded p-3 mt-10 text-base font-semibold leading-7 text-gray-300 flex items-center justify-center">
-              <div className="left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-800">
-                <GlobeAltIcon className="h-6 w-6 text-white" aria-hidden="true" />
-              </div>
-              <h3 className="ml-4">Av. Pres. Getúlio Vargas - Vila Elsa, Alvorada - RS, 94836-193 </h3>
-            </div>
+            <button type="button" className="text-white bg-gray-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-gray-400 font-medium rounded-lg text-sm px-5 py-2.5 text-left inline-flex items-center mr-2 my-3 dark:bg-gray-600 dark:hover:bg-gray-800 dark:focus:ring-gray-900">
+              <MapPinIcon className="h-6 w-6 text-white mr-2" aria-hidden="true" />
+              Av. Pres. Getúlio Vargas - Vila Elsa, Alvorada - RS, 94836-193
+            </button>
           </Link>
         </div>
       </div>
@@ -77,6 +75,50 @@ const Home: React.FunctionComponent = () => {
               'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
           }}
         />
+      </div>
+      <h1 id="celulas" className="text-4xl font-bold tracking-tight text-gray-300 sm:text-6xl uppercase mt-20 text-center">
+        Conheça nossas células
+      </h1>
+      <div id="accordion-collapse" data-accordion="collapse" className="grid grid-cols-1 lg:grid-cols-2 gap-10 my-10">
+        {cells && 
+          cells.map( cell => {
+            return (
+              <>
+                <div  className="max-w p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                  <h5 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">{cell.title}</h5>
+                  <h3 className="mt-7 text-lg font-bold tracking-tight text-gray-900 dark:text-white"> Próximo encontro: </h3>
+                  {cell.location.weekDay} | {cell.location.nextMeeting}
+                  <h3 className="mt-7 text-lg font-bold tracking-tight text-gray-900 dark:text-white"> Endereço da célula: </h3>
+                  <Link 
+                    href={cell.location.map}
+                    className="flex-initial items-center"
+                  >
+                    <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-400 font-medium rounded-lg text-sm px-5 py-2.5 text-left inline-flex items-center mr-2 my-3 dark:bg-blue-600 dark:hover:bg-blue-800 dark:focus:ring-blue-900">
+                      <MapPinIcon className="h-6 w-6 text-white mr-2" aria-hidden="true" />
+                      {cell.location.address}
+                    </button>
+                  </Link>
+                  <h3 className="mt-7 text-lg font-bold tracking-tight text-gray-900 dark:text-white"> Participantes: </h3>
+                  <div className="grid grid-cols-2">
+                    {cell.members.map( member => {
+                      return (
+                        <>
+                          <div className="flex items-center space-x-4 m-3 m-3 bg-gray-600 p-3 rounded ">
+                            <UserIcon className="w-5 h-5 rounded-full" aria-hidden="true" />
+                            <div className="font-medium dark:text-white">
+                              <div>{member.name}</div>
+                              <div className="text-sm text-gray-500 dark:text-gray-400">{member.role}</div>
+                            </div>
+                          </div>
+                        </>
+                      )
+                    })}  
+                  </div>
+                </div>
+              </>
+            )
+          })
+        }
       </div>
     </main>
   )
