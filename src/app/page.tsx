@@ -34,7 +34,7 @@ const Home: React.FunctionComponent = () => {
   }, [getCells])
 
   return (
-    <main className="flex flex-col items-center justify-between lg:p-20 p-5">
+    <main className="flex flex-col items-center justify-between lg:p-20 p-5 light:bg-black">
       <Loader show={isLoading} />
       <div className="relative isolate">
         <Image
@@ -104,11 +104,11 @@ const Home: React.FunctionComponent = () => {
                     {cell.members.map( member => {
                       return (
                         <>
-                          <div className="flex items-center space-x-4 m-3 m-3 bg-gray-600 p-3 rounded ">
+                          <div className="flex items-center space-x-4 m-3 m-3 bg-gray-200 dark:bg-gray-600 p-3 rounded ">
                             <UserIcon className="w-5 h-5 rounded-full hidden md:block" aria-hidden="true" />
                             <div className="font-medium dark:text-white">
                               <div>{member.name}</div>
-                              <div className="text-sm text-gray-500 dark:text-gray-400">{roleLabels[member.role] || ""}</div>
+                              <div className="text-sm text-gray-600 dark:text-gray-400">{roleLabels[member.role] || ""}</div>
                             </div>
                           </div>
                         </>
