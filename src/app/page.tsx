@@ -7,6 +7,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { findCells } from './api';
 import { cellProps } from './api/models';
 import Loader from './components/Loader';
+import { roleLabels, weekDayLabels } from './utils/labels';
 
 const Home: React.FunctionComponent = () => {
 
@@ -87,7 +88,7 @@ const Home: React.FunctionComponent = () => {
                 <div  className="max-w p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                   <h5 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">{cell.title}</h5>
                   <h3 className="mt-7 text-lg font-bold tracking-tight text-gray-900 dark:text-white"> Próximo encontro: </h3>
-                  {cell.location.weekDay} | {cell.location.nextMeeting}
+                  { weekDayLabels[cell.location.weekDay] || ""} | {cell.location.nextMeeting}
                   <h3 className="mt-7 text-lg font-bold tracking-tight text-gray-900 dark:text-white"> Endereço da célula: </h3>
                   <Link 
                     href={cell.location.map}
@@ -107,7 +108,7 @@ const Home: React.FunctionComponent = () => {
                             <UserIcon className="w-5 h-5 rounded-full" aria-hidden="true" />
                             <div className="font-medium dark:text-white">
                               <div>{member.name}</div>
-                              <div className="text-sm text-gray-500 dark:text-gray-400">{member.role}</div>
+                              <div className="text-sm text-gray-500 dark:text-gray-400">{roleLabels[member.role] || ""}</div>
                             </div>
                           </div>
                         </>

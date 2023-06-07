@@ -5,7 +5,7 @@ export enum ROLE {
   HOST = "HOST"
 }
 
-export enum WEEKLY_DAY {
+export enum WEEK_DAY {
   MONDAY = "MONDAY",
   TUESDAY = "TUESDAY",
   WEDNESDAY = "WEDNESDAY",
