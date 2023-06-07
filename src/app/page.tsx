@@ -1,10 +1,40 @@
+"use client";
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
+import { useCallback, useEffect, useState } from 'react';
+import { findCells } from './api';
+import { cellProps } from './api/models';
+import Loader from './components/Loader';
 
-export default function Home() {
+const Home: React.FunctionComponent = () => {
+
+  const [cells, setCells] = useState<cellProps[]>()
+  const [isLoading, setisLoading] = useState(false)
+
+
+  const getCells = useCallback(async () => {
+    setisLoading(true);
+    try {
+      const { data } = await findCells();
+      setCells(data)
+    }
+    catch (error) {
+      console.error(error)
+    }
+    finally {
+      setisLoading(false);
+    }
+  },[])
+
+  useEffect(() => {
+    getCells();
+  }, [getCells])
+
   return (
     <main className="flex flex-col items-center justify-between lg:p-24 p-5">
+      <Loader show={isLoading} />
       <div className="relative isolate">
         <Image
           src="/logo.png"
@@ -51,3 +81,5 @@ export default function Home() {
     </main>
   )
 }
+
+export default Home;
