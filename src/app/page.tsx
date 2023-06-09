@@ -8,7 +8,7 @@ import ProjectCard from './components/ProjectCard';
 const Home: React.FunctionComponent = () => {
   return (
     <main className="flex flex-col items-center justify-between">
-      <div className="bg-black p-5 lg:py-10">
+      <div className="bg-black p-5 lg:py-10 w-full">
         <div className="relative isolate">
           <Image
             src="/logo.png"
