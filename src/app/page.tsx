@@ -1,6 +1,5 @@
 "use client";
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { MapPinIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 import ProjectCard from './components/ProjectCard';
@@ -9,16 +8,6 @@ const Home: React.FunctionComponent = () => {
   return (
     <main className="flex flex-col items-center justify-between">
       <div className="bg-black p-5 lg:py-10 w-full">
-        <div className="relative isolate">
-          <Image
-            src="/logo.png"
-            alt="IEQ Família de Cristo Logo"
-            className="mx-auto"
-            width={200}
-            height={200}
-            priority
-          />
-        </div>
         <div className="mx-auto max-w-2xl">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-300 sm:text-6xl uppercase">
