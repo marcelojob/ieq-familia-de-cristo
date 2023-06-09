@@ -50,14 +50,7 @@ const Home: React.FunctionComponent = () => {
           image='/cells-card.jpg'
           title='Células'
           description='Reuniões quinzenais de pequenos grupos fortalecendo a comunhão e crescimento espiritual do grupo.'
-         />
-         <ProjectCard
-          path='/celulas'
-          image='/cells-card.jpg'
-          title='Células'
-          description='Reuniões quinzenais de pequenos grupos fortalecendo a comunhão provendo um crescimento espiritual do grupo.'
-         />
-         
+         />         
         </div>
       </div>
     </main>
