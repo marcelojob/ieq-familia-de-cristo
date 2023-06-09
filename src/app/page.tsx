@@ -4,16 +4,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { MapPinIcon, UserIcon } from '@heroicons/react/24/outline';
 import { useCallback, useEffect, useState } from 'react';
-import { findCells } from './api';
-import { cellProps } from './api/models';
-import Loader from './components/Loader';
-import { roleLabels, weekDayLabels } from './utils/labels';
+import { findCells } from '#/api/route';
+import { cellProps } from '#/api/models';
+import Loader from '#/components/Loader';
+import { roleLabels, weekDayLabels } from '#/utils/labels';
 
 const Home: React.FunctionComponent = () => {
 
   const [cells, setCells] = useState<cellProps[]>()
   const [isLoading, setisLoading] = useState(false)
-
 
   const getCells = useCallback(async () => {
     setisLoading(true);

@@ -1,5 +1,5 @@
 import { ROLE, WEEK_DAY } from "../api/enums";
-import { Hashmap } from "../api/models";
+import { Hashmap } from "#/api/models";
 
 export const weekDayLabels: Hashmap<string> = {
   [WEEK_DAY.SUNDAY]: "Domingo",
