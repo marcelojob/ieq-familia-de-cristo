@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { MapPinIcon } from '@heroicons/react/24/outline';
+import { MapPinIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 import ProjectCard from './components/ProjectCard';
 
 const Home: React.FunctionComponent = () => {
@@ -39,17 +39,25 @@ const Home: React.FunctionComponent = () => {
           </div>
         </div>
       </div>
-      <div className="bg-gray-950 w-full p-5 lg:py-10">
+      <div className="bg-gray-950 w-full p-10">
         <h2 className=" text-center mb-3 text-4xl font-bold tracking-tight text-gray-300 lg:text-2xl uppercase">
-          Nossos projetos
+          Acompanhe nossas atividades
         </h2>
-        <div className="flex items-center justify-center mt-5">
+        <ChevronDownIcon className="h-6 w-6 text-white mb-3 mx-auto" />
+        <div className="flex justify-center align-center flex-col lg:flex-row gap-10 mt-8 justify-center">
+         <ProjectCard
+          path='/celulas'
+          image='/cells-card.jpg'
+          title='Células'
+          description='Reuniões quinzenais de pequenos grupos fortalecendo a comunhão e crescimento espiritual do grupo.'
+         />
          <ProjectCard
           path='/celulas'
           image='/cells-card.jpg'
           title='Células'
           description='Reuniões quinzenais de pequenos grupos fortalecendo a comunhão provendo um crescimento espiritual do grupo.'
          />
+         
         </div>
       </div>
     </main>
