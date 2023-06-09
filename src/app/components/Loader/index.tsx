@@ -1,4 +1,3 @@
-
 type LoaderProps = {
   show: boolean;
 }
