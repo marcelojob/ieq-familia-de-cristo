@@ -52,7 +52,7 @@ const Schedule: React.FunctionComponent = () => {
         const date = new Date(event.date);
         
         return (
-          <div key={index} className="flex items-center bg-gray-800 w-11/12 lg:w-2/3 rounded-lg my-2 ">
+          <div key={index} className="flex items-center bg-white w-11/12 lg:w-2/3 rounded-lg my-2 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700  ">
             <div className="flex flex-col items-center justify-center w-16 lg:w-24 bg-gray-600 p-5 rounded-l-lg">
               <span className='text-4xl font-bold'>{date.getDate()}</span>
               <span className='text-lg font-bold uppercase'>{weekDayDateLabel[date.getDay()] || ""}</span>
