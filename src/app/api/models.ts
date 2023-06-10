@@ -19,6 +19,24 @@ type member = {
   role: ROLE;
 }
 
+export interface ScheduleProps {
+  title: string;
+  theme: Theme;
+  schedule: Schedule[];
+}
+
+type Theme = {
+  title: string;
+  text: string;
+  reference: string;
+  image: string;
+}
+
+type Schedule = {
+  date: Date;
+  event: string;
+}
+
 export interface Hashmap<T> {
   [key : string]: T;
 }
