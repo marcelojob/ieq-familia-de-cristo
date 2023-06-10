@@ -43,7 +43,7 @@ const Cells: React.FunctionComponent = () => {
           cells.map( cell => {
             return (
               <>
-                <div  className="max-w p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <div key={cell.id}  className="max-w p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                   <h5 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">{cell.title}</h5>
                   <h3 className="mt-7 text-lg font-bold tracking-tight text-gray-900 dark:text-white"> Próximo encontro: </h3>
                   { weekDayLabels[cell.location.weekDay] || ""} | {cell.location.nextMeeting}
@@ -62,7 +62,7 @@ const Cells: React.FunctionComponent = () => {
                     {cell.members.map( member => {
                       return (
                         <>
-                          <div className="flex items-center space-x-4 m-3 m-3 bg-gray-200 dark:bg-gray-600 p-3 rounded ">
+                          <div key={member.name} className="flex items-center space-x-4 m-3 m-3 bg-gray-200 dark:bg-gray-600 p-3 rounded ">
                             <UserIcon className="w-5 h-5 rounded-full hidden md:block" aria-hidden="true" />
                             <div className="font-medium dark:text-white">
                               <div>{member.name}</div>
