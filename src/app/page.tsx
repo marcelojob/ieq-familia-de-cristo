@@ -34,12 +34,18 @@ const Home: React.FunctionComponent = () => {
         </h2>
         <ChevronDownIcon className="h-6 w-6 text-white mb-3 mx-auto" />
         <div className="flex justify-center align-center flex-col lg:flex-row gap-10 mt-8 justify-center">
-         <ProjectCard
-          path='/celulas'
-          image='/cells-card.jpg'
-          title='Células'
-          description='Reuniões quinzenais de pequenos grupos fortalecendo a comunhão e crescimento espiritual do grupo.'
-         />         
+          <ProjectCard
+            path='/celulas'
+            image='/cells-card.jpg'
+            title='Células'
+            description='Reuniões quinzenais de pequenos grupos fortalecendo a comunhão e crescimento espiritual do grupo.'
+          />
+          <ProjectCard
+            path='/programacao'
+            image='/schedule-card.jpg'
+            title='Programação do mês'
+            description='Acompanhe a programação do mês da Quadrangular família de cristo, assim como o tema do mês e fique atento as atividades.'
+          />     
         </div>
       </div>
     </main>
