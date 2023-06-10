@@ -11,6 +11,16 @@ export const weekDayLabels: Hashmap<string> = {
   [WEEK_DAY.SATURDAY]: "Sábado",
 }
 
+export const weekDayDateLabel: Hashmap<string> = {
+  0: "Dom",
+  1: "Seg",
+  2: "Ter",
+  3: "Qua",
+  4: "Qui",
+  5: "Sex",
+  6: "Sab",
+}
+
 export const roleLabels: Hashmap<string> = {
   [ROLE.LEADER]: "Líder",
   [ROLE.VICE_LEADER]: "Líder em treinamento",

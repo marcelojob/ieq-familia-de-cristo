@@ -5,6 +5,7 @@ import { findSchedule } from '#/api';
 import { ScheduleProps } from '#/api/models';
 import Loader from '#/components/Loader';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
+import { weekDayDateLabel } from '#/utils/labels';
 
 const Schedule: React.FunctionComponent = () => {
   
@@ -42,14 +43,26 @@ const Schedule: React.FunctionComponent = () => {
           <p className="font-bold text-sm">{schedule?.theme.reference}</p>
         </div>  
       </div>
-      <h2 className=" text-center mb-3 mt-5 text-2xl font-bold tracking-tight text-gray-300 uppercase">
+      <h2 className=" text-center mb-3 mt-10 text-2xl font-bold tracking-tight text-gray-300 uppercase">
         {schedule?.title}
       </h2>
       <ChevronDownIcon className="h-6 w-6 text-white mb-3 mx-auto" />
       {schedule?.schedule.map( (event, index) => {
+
+        const date = new Date(event.date);
+        
         return (
-          <div key={index}> 
-              <span> {event.event}</span>
+          <div key={index} className="flex items-center bg-gray-800 w-11/12 lg:w-2/3 rounded-lg my-2 ">
+            <div className="flex flex-col items-center justify-center w-16 lg:w-24 bg-gray-600 p-5 rounded-l-lg">
+              <span className='text-4xl font-bold'>{date.getDate()}</span>
+              <span className='text-lg font-bold uppercase'>{weekDayDateLabel[date.getDay()] || ""}</span>
+            </div>
+            <div className="grow p-3 text-lg lg:text-2xl">
+              <h2>{event.event} </h2>
+            </div>
+            <div className="flex-none p-3 border-1 border-gray-200 text-lg lg:text-2xl">
+              <h3> {date.getHours() ? `${date.getHours()}h` : ""}{date.getMinutes() ? date.getMinutes() : ""}</h3>               
+            </div>
           </div>
         )
       })}
