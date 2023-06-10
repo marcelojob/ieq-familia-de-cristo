@@ -7,7 +7,7 @@ const  Footer: React.FunctionComponent = () =>  {
 
   return (
     <>
-      <footer className="bg-white rounded-lg shadow dark:bg-gray-900">
+      <footer className="rounded-lg shadow bg-gray-900">
         <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
           <div className="sm:flex sm:items-center sm:justify-between">
               <Link href="/" className="flex items-center mb-4 sm:mb-0">
@@ -24,7 +24,7 @@ const  Footer: React.FunctionComponent = () =>  {
                 <Link href="https://www.facebook.com/quadrangularfamiliadecristo/" target="_blank" className="mr-6 hover:underline">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-8 w-8"
+                    className="h-8 w-8 hover:text-gray-200"
                     fill="currentColor"
                     viewBox="0 0 24 24">
                     <path
@@ -34,7 +34,7 @@ const  Footer: React.FunctionComponent = () =>  {
                 <Link href="https://www.instagram.com/ieqfamiliadecristo/" target="_blank" className="mr-6 hover:underline">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-8 w-8"
+                    className="h-8 w-8 hover:text-gray-200"
                     fill="currentColor"
                     viewBox="0 0 24 24">
                     <path
@@ -44,7 +44,7 @@ const  Footer: React.FunctionComponent = () =>  {
                 <Link href="https://www.youtube.com/@quadrangularfamiliadecristo" target="_blank" className="mr-6 hover:underline">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-8 w-8"
+                    className="h-8 w-8 hover:text-gray-200"
                     fill="currentColor"
                     viewBox="0 0 24 24">
                     <path
@@ -54,7 +54,7 @@ const  Footer: React.FunctionComponent = () =>  {
                 <Link href="https://api.whatsapp.com/send?phone=5551981302330&text=Ol%C3%A1!%20Estou%20vindo%20atrav%C3%A9s%20do%20site%20da%20igreja,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20cultos" target="_blank" className="mr-6 hover:underline">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-8 w-8"
+                    className="h-8 w-8 hover:text-gray-200"
                     fill="currentColor"
                     viewBox="0 0 24 24">
                     <path
@@ -64,7 +64,7 @@ const  Footer: React.FunctionComponent = () =>  {
               </div>
           </div>
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-          <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400 text-center"> {`© ${currentYear}`} <Link href="https://ieqfamiliadecristo.com.br/" className="hover:underline">IEQ Família de Cristo</Link>. Todos os direitos reservados.</span>
+          <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400 text-center "> {`© ${currentYear}`} <Link href="https://ieqfamiliadecristo.com.br/" className="hover:underline hover:text-gray-200">IEQ Família de Cristo</Link>. Todos os direitos reservados.</span>
         </div>
       </footer>
     </>    
