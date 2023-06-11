@@ -19,7 +19,7 @@ const  ProjectCard: React.FunctionComponent<ProjectCardProps> = ( props: Project
         <Image
           src={props.image}
           alt={`Imagem ${props.title}`}
-          className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+          className="object-cover w-full rounded-t-lg h-40 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
           width={200}
           height={250}
           priority
