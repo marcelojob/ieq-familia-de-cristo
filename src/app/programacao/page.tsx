@@ -58,10 +58,10 @@ const Schedule: React.FunctionComponent = () => {
               <span className='text-lg font-bold uppercase'>{weekDayDateLabel[date.getDay()] || ""}</span>
             </div>
             <div className="grow p-3 text-lg lg:text-2xl">
-              <h2>{event.event} </h2>
+              <h2 className='lg:text-3xl'>{event.event} </h2>
             </div>
-            <div className="flex-none p-3 border-1 border-gray-200 text-lg lg:text-2xl">
-              <h3> {date.getHours() ? `${date.getHours()}h` : ""}{date.getMinutes() ? date.getMinutes() : ""}</h3>               
+            <div className="flex-none p-3 border-1 border-gray-200 text-lg lg:text-4xl">
+              <h3 className='lg:text-3xl font-bold'> {date.getHours() ? `${date.getHours()}h` : ""}{date.getMinutes() ? date.getMinutes() : ""}</h3>               
             </div>
           </div>
         )
